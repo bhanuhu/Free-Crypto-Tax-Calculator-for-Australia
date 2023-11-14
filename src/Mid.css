@@ -1,0 +1,18 @@
+.Mid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    padding: 10px;  
+    text-align: left;
+    margin-left: 30%;
+ }
+ .midleft{
+
+ }
+ .midright{
+
+ }
+ .line{
+    margin-left: 15%;
+    margin-right: 15%;
+}
