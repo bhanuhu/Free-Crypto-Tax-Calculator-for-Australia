@@ -86,13 +86,7 @@ setNeedPay(0)
   setShortTermClr(false)
  }
  useEffect(() => {
-  if(discount>0)
-  needPayment()
-else
-setNeedPay(0)
- } ,[rateText, discount]);
-
- const needPayment = () => {
+  if(discount>0){
   if(rateText== "0"){
     setNeedPay(0)
   }else if(rateText === "18200"){
@@ -103,8 +97,11 @@ setNeedPay(0)
     setNeedPay(discount*0.37) 
   }else{
     setNeedPay(discount*0.45)
-  }
- }
+  }}
+else
+setNeedPay(0)
+ } ,[rateText, discount]);
+
 
   return (
 <Fragment>
