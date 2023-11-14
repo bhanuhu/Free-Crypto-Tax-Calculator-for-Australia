@@ -1,6 +1,4 @@
 import "./Mid.css";
-import Midleft from "./Midleft";
-import Midright from "./Midright";
 import { Fragment, useState, useEffect } from "react";
 import {
   Button,
