@@ -1,8 +1,6 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Top from './Top';
-import Bottom from './Bottom';
-
 import Mid from './Mid';
 
 // 1. import `ChakraProvider` component

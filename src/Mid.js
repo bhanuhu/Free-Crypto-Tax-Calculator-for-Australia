@@ -12,11 +12,9 @@ import {
   GridItem,
   Box,
   Select,
-  Center,
   Card,
   CardBody,
   CardHeader,
-  Flex,
   Heading
 } from "@chakra-ui/react";
 import { questionData } from "./questionData";
@@ -47,7 +45,7 @@ useEffect(() => {
 }, [ddown1]);
   useEffect(() => {
    
-      if (crypto && purchase && expense != undefined) {
+      if (crypto && purchase && expense !== undefined) {
       
         let gam = crypto - purchase - expense;
         setgamount(gam)
@@ -84,7 +82,7 @@ setNeedPay(0)
         setNetCapAmnt(0)
         
       }
-     } ,[discount]);
+     } ,[discount, gamount]);
     
  const handleLongTerm =() => {
   setShortTermClr(false)
@@ -99,11 +97,11 @@ setNeedPay(0)
  const needPayment = () => {
   if(rateText== "0"){
     setNeedPay(0)
-  }else if(rateText == "18200"){
+  }else if(rateText === "18200"){
     setNeedPay(discount*0.19)
   }else if(rateText === "45000"){
     setNeedPay(discount*0.325)
-  }else if(rateText == 120000){
+  }else if(rateText === "120000"){
     setNeedPay(discount*0.37) 
   }else{
     setNeedPay(discount*0.45)
