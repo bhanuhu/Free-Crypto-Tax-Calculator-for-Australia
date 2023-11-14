@@ -87,7 +87,7 @@ setNeedPay(0)
  }
  useEffect(() => {
   if(discount>0){
-  if(rateText== "0"){
+  if(rateText==="0"){
     setNeedPay(0)
   }else if(rateText === "18200"){
     setNeedPay(discount*0.19)
