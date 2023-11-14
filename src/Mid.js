@@ -84,23 +84,62 @@ setNeedPay(0)
     
  const handleLongTerm =() => {
   setShortTermClr(false)
+  if(gamount> 0){
+    let netCapAmount = gamount- discount
+    setNetCapAmnt(netCapAmount)
+    if(rateText==="0%"){
+      console.log(rateText)
+      setNeedPay(0)
+    }else if(rateText === "Nil + 19% of excess over $18,200"){
+      console.log(rateText)
+  
+      setNeedPay(discount*0.19)
+    }else if(rateText === "$5,092 + 32.5% of excess over $45,000"){
+      console.log(rateText)
+  
+      setNeedPay(discount*0.325)
+    }else if(rateText === "$29,467 + 37% of excess over $120,000"){
+      console.log(rateText)
+  
+      setNeedPay(discount*0.37) 
+    }else{
+      console.log(rateText)
+  
+      setNeedPay(discount*0.45)
+    }
+  
+  }else{
+    setNetCapAmnt(0)
+    setNeedPay(0)
+  }
  }
  useEffect(() => {
   if(discount>0){
-  if(rateText==="0"){
+    console.log('rateText :>> ', rateText);
+  if(rateText==="0%"){
+    console.log(rateText)
     setNeedPay(0)
-  }else if(rateText === "18200"){
+  }else if(rateText === "Nil + 19% of excess over $18,200"){
+    console.log(rateText)
+
     setNeedPay(discount*0.19)
-  }else if(rateText === "45000"){
+  }else if(rateText === "$5,092 + 32.5% of excess over $45,000"){
+    console.log(rateText)
+
     setNeedPay(discount*0.325)
-  }else if(rateText === "120000"){
+  }else if(rateText === "$29,467 + 37% of excess over $120,000"){
+    console.log(rateText)
+
     setNeedPay(discount*0.37) 
   }else{
+    console.log(rateText)
+
     setNeedPay(discount*0.45)
   }}
 else
 setNeedPay(0)
  } ,[rateText, discount]);
+ console.log(needPay)
 
 
   return (
