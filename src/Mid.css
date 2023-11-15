@@ -1,18 +1,22 @@
-.Mid{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 10px;
-    padding: 10px;  
-    text-align: left;
-    margin-left: 30%;
- }
- .midleft{
+/* @media screen and (max-width: 480px){
+    .faq{
+        padding-left: 1rem;
+    }
+    .top-grid{
+        padding-left: 1rem;
+    }
+    .topp{
+        padding-left: 1rem;
+    }
+} */
 
- }
- .midright{
+.mid-container{
+    padding: 0 20%;
+}
 
- }
- .line{
-    margin-left: 15%;
-    margin-right: 15%;
+@media screen and (max-width: 480px) {
+    .mid-container{
+        padding: 0 10%;
+    }
+
 }

@@ -1,6 +1,5 @@
 
 import './App.css';
-import Top from './Top';
 import Mid from './Mid';
 
 // 1. import `ChakraProvider` component
@@ -14,7 +13,6 @@ function App() {
     <div className="App">
       <div className='inner'>
       <Heading as="h1" textAlign="center" mb="2rem">Free Crypto Tax Calculator Australia</Heading>
-      <Top className="topp"></Top>
       <Mid className='midd'></Mid>
     
 

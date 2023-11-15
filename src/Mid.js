@@ -12,10 +12,10 @@ import {
   Select,
   Card,
   CardBody,
-  CardHeader,
-  Heading
+  CardHeader
 } from "@chakra-ui/react";
-import { questionData } from "./questionData";
+import Top from './Top';
+import Faq from "./Faq";
 
 const Mid = () => {
   const [crypto, setcrypto] = useState("");
@@ -144,11 +144,12 @@ setNeedPay(0)
 
   return (
 <Fragment>
+<Top/>
 <Grid backgroundColor="grey">
 <Grid
 background="white"
     width="100%"
-    px="20%"
+    className="mid-container"
   justifyContent="center"
       h="100pvh"
       templateRows={{sm:"repeat(1, 1fr)", md:"repeat(1, 1fr)", lg:"repeat(1, 1fr)"}}
@@ -303,24 +304,9 @@ background="white"
 </Card>
       </GridItem>
     </Grid>
-    <Card px="4rem">
-      <Heading as="h2" pb="3rem">Frequently Asked Questions</Heading>
-      
-      {questionData && questionData?.map((item) => (
-        <FormControl>
-        <Text as="b" key ={item.id}>
-          {item.id}.&nbsp;
-        </Text>
-        <Text as="b">
-          {item.ques}
-        </Text>
-        <Text>{item.ans}</Text>
-        </FormControl>
-      ))}
-
-      
-    </Card>
+   
 </Grid>
+<Faq/>
 </Fragment>
     
   );
